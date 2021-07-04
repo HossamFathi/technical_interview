@@ -1,0 +1,61 @@
+﻿<Window x:Class="Invoice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Invoice"
+        mc:Ignorable="d"
+        Title="Invoice" Height="468"  Width="800">
+
+    <Grid Margin="0,2,0,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="PrintBtn" Content="Print" HorizontalAlignment="Left" Margin="627,368,0,20" Width="141" Click="PrintBtn_Click" Grid.Column="1" FontSize="24" FontWeight="Bold" Foreground="#FFEEDCDC" FontFamily="Sitka Heading">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF778CEE" Offset="0"/>
+                    <GradientStop Color="#FF199B95" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="InvoiceItemGrid" HorizontalAlignment="Left" Height="197" Margin="10,155,0,0" VerticalAlignment="Top" Width="758" BorderBrush="#FF053664" OpacityMask="Black" Grid.Column="1" Background="#FFC3C7CD" >
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF729EDE"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Item" Binding="{Binding product.ProductName}" Width="250"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding product.Price}" Width="250"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="DateLbl" Content="Date" Height="48" Margin="10,357,410,0" VerticalAlignment="Top" FontSize="28" Grid.Column="1" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="BranshNameLbl" Content="Branch Name" Margin="496,88,20,0" VerticalAlignment="Top" Width="276" Height="40" FontSize="24" Grid.Column="1" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="{x:Null}" FontWeight="Bold"/>
+        <Label x:Name="CustomerNameLbl" Content="Customer Name" Margin="10,88,602,0" VerticalAlignment="Top" Height="35" AutomationProperties.Name="CustomerName" FontSize="20" Grid.Column="1" FontWeight="Bold" Foreground="#FFEEDCDC">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3C69AA" Offset="1"/>
+                    <GradientStop Color="#FF729EDE"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="InvoicLbl" Content="Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="792" Height="65" FontSize="42" FontWeight="Bold" Grid.Column="1" Foreground="#FFEEDCDC" HorizontalContentAlignment="Center">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF729EDE" Offset="0"/>
+                    <GradientStop Color="#FF3C69AA" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="CustomerNameTxt" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" Margin="195,88,0,0" FontSize="20" AutomationProperties.HelpText="Customer Name"/>
+    </Grid>
+</Window>

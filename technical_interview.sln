@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fatora", "fatora\fatora.csproj", "{7389B86D-DD76-489E-8C5A-27B55C0EB5FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "Invoice\Invoice.csproj", "{095250C6-8E9C-461A-AE54-19DCF25989BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7389B86D-DD76-489E-8C5A-27B55C0EB5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7389B86D-DD76-489E-8C5A-27B55C0EB5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7389B86D-DD76-489E-8C5A-27B55C0EB5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7389B86D-DD76-489E-8C5A-27B55C0EB5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095250C6-8E9C-461A-AE54-19DCF25989BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095250C6-8E9C-461A-AE54-19DCF25989BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095250C6-8E9C-461A-AE54-19DCF25989BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095250C6-8E9C-461A-AE54-19DCF25989BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7E731BE-0B10-4CBB-8F04-259F0A1302A9}
+	EndGlobalSection
+EndGlobal
