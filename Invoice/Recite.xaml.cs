@@ -37,7 +37,7 @@ namespace Invoice
             {
                 this.ItemList.Items.Add(item);
             }
-            
+            this.TotalValueLbl.Content = invoice.Items.Select(inv => inv.product.Price).Sum().ToString() ;
         
         }
     }

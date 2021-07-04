@@ -19,7 +19,7 @@
         <Label x:Name="CustomerNameLbl" Content="Customer Name" HorizontalAlignment="Left" Height="53" Margin="206,120,0,0" VerticalAlignment="Top" Width="189" FontSize="24"/>
         <Label x:Name="BranshNameLbl" Content="Bransh Name" HorizontalAlignment="Left" Height="53" Margin="206,157,0,0" VerticalAlignment="Top" Width="189" FontSize="24" RenderTransformOrigin="0.506,1.057"/>
         <Label x:Name="DateLbl" Content="date" HorizontalAlignment="Left" Height="53" Margin="204,199,0,0" VerticalAlignment="Top" Width="189" FontSize="24" RenderTransformOrigin="0.346,-0.616"/>
-        <ListView x:Name="ItemList" HorizontalAlignment="Left" Margin="10,277,0,50" VerticalAlignment="Top" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="False" Width="380" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF131313" HorizontalContentAlignment="Center">
+        <ListView x:Name="ItemList" HorizontalAlignment="Left" Margin="10,277,0,76" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="False" Width="380" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF131313" HorizontalContentAlignment="Center">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="item" DisplayMemberBinding="{Binding product.ProductName}" Width="140"/>
@@ -32,5 +32,7 @@
         <Label x:Name="Date" Content="Date :" HorizontalAlignment="Left" Margin="10,199,0,0" VerticalAlignment="Top" Width="189" FontSize="20" Height="53"/>
         <Label x:Name="CustomerName" Content="Customer Name :" HorizontalAlignment="Left" Height="53" Margin="8,120,0,0" VerticalAlignment="Top" Width="204" FontSize="24"/>
         <Label x:Name="BranshNameLbl_Copy" Content="Bransh Name :" HorizontalAlignment="Left" Height="53" Margin="10,157,0,0" VerticalAlignment="Top" Width="189" FontSize="24" RenderTransformOrigin="0.506,1.057"/>
+        <Label x:Name="TotalLbl" Content="Total : " VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="18,325,0,20" Width="80" FontSize="24"/>
+        <Label x:Name="TotalValueLbl" Content="" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="132,325,0,20" Width="80" FontSize="24"/>
     </Grid>
 </Window>
